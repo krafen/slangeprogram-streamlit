@@ -312,7 +312,7 @@ if st.session_state.input_mode == "quick":
     # Process button
     if st.button("✅ Legg til slange", use_container_width=True, key="quick_add_btn"):
         if not first_line:
-            st.error("Første utdata-linje må oppgis!")
+            st.error("Slangebeskrivelse må oppgis!")
         else:
             # Find matches from summary
             selected_row, second_row1, second_row2, sheet_name_found, size_str, length_int = core.find_matches_from_summary(
@@ -609,3 +609,4 @@ if st.session_state.output_rows:
 else:
 
     st.info("👈 Ingen slanger lagt til ennå. Velg innføringmodus og fyll inn feltene")
+
