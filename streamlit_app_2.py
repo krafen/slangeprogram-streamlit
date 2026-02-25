@@ -257,7 +257,7 @@ if st.session_state.input_mode == "quick":
     col1, col2 = st.columns([2, 1])
 
     with col1:
-        first_line = st.text_input("Første utdata-linje", placeholder="Del1/Lengde/Del2/Del3[/Vinkel°]")
+        first_line = st.text_input("Slangebeskrivelse", placeholder="Del1/Lengde/Del2/Del3[/Vinkel°]")
 
     with col2:
         material = st.selectbox("Materiale", ["stål", "syrefast"], key="quick_material")
@@ -607,4 +607,5 @@ if st.session_state.output_rows:
                 use_container_width=True
             )
 else:
+
     st.info("👈 Ingen slanger lagt til ennå. Velg innføringmodus og fyll inn feltene")
